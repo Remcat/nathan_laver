@@ -1,0 +1,14 @@
+common: &common
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  username: nave19
+  password: NatesWeb1!
+
+development:
+  <<: *common
+  database: laver_development
+
+test:
+  <<: *common
+  database: laver_test

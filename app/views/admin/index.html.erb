@@ -1,0 +1,25 @@
+<h1>Administration</h1>
+<% if false %>
+<%= link_to "Logout", session, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<br/>
+<br/>
+
+<% @vids.each do |vid| %>
+
+    <div>
+      <li>
+        <%= vid.title %>
+        <%= vid.blurb %>
+        <%= link_to "Edit", edit_video_path(vid) %> | <%= link_to "Delete", vid, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    </div>
+    <br/>
+
+<% end %>
+
+<br/>
+<div>
+<%= link_to "Add a new video", new_video_url %>
+</div>

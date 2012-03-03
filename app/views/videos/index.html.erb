@@ -1,0 +1,12 @@
+<% @videos.each do |vid| %>
+
+    <div id="<%= vid.location%>">
+      <a rel="shadowbox;width=853;height=480;" href=<% vid.url %>>
+        <%= image_tag vid.image %></a>
+      <h4 class="center"><span class="center">
+        <%= link_to '"' + vid.title + '"', vid.url, :rel=>"shadowbox;title=Fixing Advertising's Talent Crisis;width=960;height=540"%><br /><%= vid.blurb %><br />
+        <%= vid.roles %>
+      </span></h4>
+    </div>
+
+<% end %>

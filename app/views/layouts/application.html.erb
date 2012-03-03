@@ -1,0 +1,120 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <%= stylesheet_link_tag "shadowbox-3-2.0.3/nlsite_test" %>
+  <%= csrf_meta_tags %>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+	<title>Nathan Laver: Director | Editor</title>
+        
+	<link rel="stylesheet" type="text/css" href="shadowbox-3-2.0.3/nlsite_test.css" />
+    <link rel="stylesheet" type="text/css" href="shadowbox-3-2.0.3/shadowbox.css" />  
+    
+    <link href="video-js/video-js.css" rel="stylesheet">
+	<script src="video-js/video.js"></script>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./shadwobox-3.0.3/sb.css" />
+          
+	<link rel="stylesheet" type="text/css" href="shadowbox-3.0.3/text.css" />-->
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" src="shadowbox-3-2.0.3/shadowbox.js"></script>
+
+	<script type="text/javascript">
+		Shadowbox.init({
+			animate: 1, 
+			animateFade: 1,
+			animSequence: "wh",
+			auto_enable_all_images: 0,
+			auto_gallery: 0,
+			autoplayMovies: true,
+			continuous: 0,
+			counterLimit: "10",
+			counterType: "default",
+			displayCounter: 1,
+			displayNav: true,
+			enableKeys: true,
+			fadeDuration: "0.35",
+			handleOversize: "resize",
+			handleUnsupported: "link",
+			initialHeight: "160",
+			initialWidth: "320",
+			language: "en",
+			modal: false,
+			overlayColor: "#000",
+			overlayOpacity: "0.85",
+			players: [ "img", "swf", "flv", "qt", "wmp", "html", "iframe" ],
+			resizeDuration: "0.35",
+			showMovieControls: 1,
+			slideshowDelay: "0",
+			viewportPadding: 20,
+			useSizzle: 0
+		});
+</script>
+<!--[if IE7]> 
+<style type="text/css"> body > #sb-container { position:absolute;} </style> 
+<![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1><a href="http://www.nathanlaver.com">Nathan Laver</a></h1>
+    <h2>nathanlaver@gmail.com | 617.947.8082</h2>
+  </div>
+  <!--  <div id="nav">
+  <p class="nav"><a href="http://www.nathanlaver.com">reel</a> • <a href="http://www.nathanlaver.com/about.html">about</a></p>
+  </div>-->
+  <div id="nav_s">
+    <span class="right"><%= image_tag "blank.gif" %></span><br />
+
+    <p class="allcaps">Dear Creative Person,</p>
+    <p class="bodytext">
+    	I want to help you<br />
+        make things.<br />
+      	Big, flashy,<br />
+        expensive-looking<br />
+      	things that	make<br />
+        our bosses love us<br />
+        and our	clients<br />
+        barf money.</p>
+    <p class="bodytext"><br />
+      Bring your ideas and<br />
+      let's
+      make
+      something<br />
+      great together</p>
+    <p><span class="allcaps">Your Friend,</span><span class="bodytext"><br />
+      <%= image_tag "smileyguy_sm.gif", :width=>40, :height=>40, :border=>0, :align=>"top" %>Nate<br/>
+
+    </span></p>
+
+    <h3 class="right"><%= image_tag "blank.gif",:height=>120, :width=>32, :border=>0 %><br />
+      <span class="right"><a href="resume/NathanLaver.pdf">&nbsp;download résumé</a></span> &nbsp;<br />
+      <span class="bodytext">(80kb pdf)&nbsp;&nbsp;</span>
+      </h3><br />
+      <br />
+
+  </div>
+
+  <div id="rule"> </div>
+  <div id="content">
+
+        <%= yield %>
+
+  </div>
+  <div id="footer">
+    <p class="leftfl"><span class="footer">© 2012 Nathan Laver.</span>
+   	<!--
+    <p class="rightfl"><span class="allcaps"><a href="index_1.html">more work</a></span></p>
+    -->
+   	</p>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+</body>
+</html>
